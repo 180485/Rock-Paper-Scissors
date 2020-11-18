@@ -22,8 +22,8 @@ function  getResult(comp, player){
     if( player == 'scissors' ) return( comp == 'rock' ) ? ' YOU LOSE ' 
     : 'YOU WIN!';
     
-    if( player == 'scissors' ) return ( comp == 'hand' ) ? 'YOU WIN! ' 
-    : 'YOU LOSE';
+    if( player == 'hand' ) return ( comp == 'scissors' ) ? 'YOU LOSE! ' 
+    : 'YOU WIN!';
     
    
 }
@@ -70,7 +70,7 @@ function  getResult(comp, player){
     phand.addEventListener('click', function(){
     const optionComputer = getOptionComputer();
     const optionPlayer = phand.className
-    const result = getResult(optionComputer , optionPlayer);
+    const result = getResult(optionComputer , optionPlayer)
 
    const imgComputer = document.querySelector(".img-komputer");
    imgComputer.setAttribute('src' ,'img/' + optionComputer + '.png');
@@ -78,5 +78,7 @@ function  getResult(comp, player){
    const info = document.querySelector('.info');
    info.innerHTML = result;
 
-})
+
+}) 
+   
 // for 3 button i choose to make it one by one 
