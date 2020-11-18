@@ -6,15 +6,15 @@
    function getOptionComputer (){
     const comp = Math.random();
 
-    if( comp < 0.34 )return'rock'; //if we used return they will stop and comeback to next value
+    if( comp < 0.34 )return'rock'; //i used return they will stop and comeback to next value
     if( comp >= 0.34 && comp < 0.67 ) return 'scissors';
     return 'hand';
     
 
    }
-//adding rules in games  for getting the result (i choose return insted of else  )
+//adding rules in games  for getting the result 
 function  getResult(comp, player){
-     //i dont need var result cause i need return  
+     //i dont need var result cause i need to return  them
     if( player == comp )return 'draw!';
     if( player == 'rock' ) return ( comp == 'scissors' ) ? ' YOU WIN !' 
     : ' YOU LOSE'; //i used this (:) IS mean apart from that
@@ -40,7 +40,7 @@ function  getResult(comp, player){
    //console.log('anwser' : + result);
 
    const imgComputer = document.querySelector(".img-komputer");
-   imgComputer.setAttribute('src' ,'img/' + optionComputer + '.png'); //i used this set attribute for change a picture for computer 
+   imgComputer.setAttribute('src' ,'img/' + optionComputer + '.png'); //i used this set attribute to change a picture for computer 
    //bycalling class numbur and (img/  )is because i put my image in folder img
 
    const info = document.querySelector('.info');
@@ -81,4 +81,4 @@ function  getResult(comp, player){
 
 }) 
    
-// for 3 button i choose to make it one by one 
+// for 3 button i choose to make it one by one cause i found this easier right now for mr to understand
