@@ -114,9 +114,7 @@ img {
   }
 .rock:hover, .scissors:hover, .hand:hover, .active {
     box-shadow: 0 0 10px 5px lightblue;
-    -ms-transform: scale(1.3); 
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3); 
+    
     
 }
 
