@@ -1,36 +1,43 @@
 
-   //is option for computer
+
+
+
+   // option for computer
    function getOptionComputer (){
     const comp = Math.random();
 
-    if( comp < 0.34 )  return'rock';
+    if( comp < 0.34 )return'rock'; //if we used return they will stop and comeback to next value
     if( comp >= 0.34 && comp < 0.67 ) return 'scissors';
     return 'hand';
     
-   
-}
-//adding rules in game (i choose return insted of else )
+
+   }
+//adding rules in games  for getting the result (i choose return insted of else  )
 function  getResult(comp, player){
-     
-    var result = '';
+     //i dont need var result cause i need return  
     if( player == comp )return 'draw!';
-    if( player == 'rock' ) return ( comp == 'scissors' ) ? 'WIN !' : ' LOSE!';
-    if( player == 'scissors' ) return( comp == 'rock' ) ? 'LOSE !' : 'WIN!';
-    if( player == 'scissors' ) return ( comp == 'hand' ) ? 'LOSE' : 'WIN!';
+    if( player == 'rock' ) return ( comp == 'scissors' ) ? ' YOU WIN !' 
+    : ' YOU LOSE'; //i used this (:) IS mean apart from that
+    
+    if( player == 'scissors' ) return( comp == 'rock' ) ? ' YOU LOSE ' 
+    : 'YOU WIN!';
+    
+    if( player == 'scissors' ) return ( comp == 'hand' ) ? 'YOU WIN! ' 
+    : 'YOU LOSE';
     
    
 }
  
 // so i make  this rock button works by clicking and i used document.querySelector to call my class
-const pRock = document.querySelector (".rock");
-pRock.addEventListener('click', function(){
+    const pRock = document.querySelector (".rock");
+    pRock.addEventListener('click', function(){
     const optionComputer = getOptionComputer();
-    const optionPlayer = pRock.className
+    const optionPlayer = pRock.className //is calling class name from html
     const result = getResult(optionComputer , optionPlayer);
    
     //console.log('comp :' + optionComputer);
    //console.log('player :' + optionPlayer);
-   //console.log('anwser' + result);
+   //console.log('anwser' : + result);
 
    const imgComputer = document.querySelector(".img-komputer");
    imgComputer.setAttribute('src' ,'img/' + optionComputer + '.png'); //i used this set attribute for change a picture for computer 
@@ -44,10 +51,10 @@ pRock.addEventListener('click', function(){
 });
 
 // so i make  this 2nd button for scissors
-const pscissors = document.querySelector (".scissors");
-pscissors.addEventListener('click', function(){
+    const pscissors = document.querySelector (".scissors");
+    pscissors.addEventListener('click', function(){
     const optionComputer = getOptionComputer();
-    const optionPlayer = pRock.className
+    const optionPlayer = pscissors.className
     const result = getResult(optionComputer , optionPlayer)
 
    const imgComputer = document.querySelector(".img-komputer");
@@ -62,7 +69,7 @@ pscissors.addEventListener('click', function(){
     const phand = document.querySelector (".hand");
     phand.addEventListener('click', function(){
     const optionComputer = getOptionComputer();
-    const optionPlayer = pRock.className
+    const optionPlayer = phand.className
     const result = getResult(optionComputer , optionPlayer);
 
    const imgComputer = document.querySelector(".img-komputer");
@@ -72,3 +79,4 @@ pscissors.addEventListener('click', function(){
    info.innerHTML = result;
 
 })
+// for 3 button i choose to make it one by one 
