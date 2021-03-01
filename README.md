@@ -16,4 +16,4 @@ Project is created with:
 * JAVASCRIPT
 
 ## My Result
-https://180485.github.io/Rock-Paper-Scissors/
+https://ismiandhyka18.github.io/Rock-Paper-Scissors/
