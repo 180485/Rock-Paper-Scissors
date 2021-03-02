@@ -1,4 +1,4 @@
-# Rock-Paper-Scissors
+# Rock-Paper-Scissors  :punch:  :v: :raised_hand:
 In this exercise, codes will create a Rock, Paper, Scissors game. To create this project, codes will use JavaScript to take user input, use the Math Library to pick a random computer choice, and use conditionals to determine the winner.
 
 ## Usage
